@@ -1,0 +1,34 @@
+.header {
+  height: 375px;
+  border-radius: 20px;
+  background-image: url("../images/autumn-mountains-sky-nature-landscape-website-header.jpg");
+  background-size: cover;
+  text-transform: uppercase;
+  font-size: 35px;
+  text-align: center;
+  color: white;
+}
+
+.footer {
+  height: 300px;
+  border-radius: 20px;
+  background-color: #d461d4;
+  /* For browsers that do not support gradients */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d461d4), to(#292828));
+  background-image: linear-gradient(180deg, #d461d4, #292828);
+}
+
+.mainsection {
+  border-radius: 20px;
+  position: relative;
+  top: -60px;
+  background-color: white;
+  padding: 30px;
+  margin: 30px;
+}
+
+html {
+  font-size: 18px;
+  background-image: url("../images/beige-paper.png");
+}
+/*# sourceMappingURL=style.css.map */
