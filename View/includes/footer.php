@@ -7,4 +7,10 @@
   </div>
   <div id="footer_3">
   </div>
+  <?php echo date("F j, Y, g:i a") ?>
 </footer>
+        
+   
+    </body>
+
+    </html>
