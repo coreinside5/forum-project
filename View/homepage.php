@@ -8,14 +8,14 @@ Anything complex should be calculated in the model -->
 
         <?php
         //var_dump($posts->getPosts());
-        foreach ($posts->getPosts()  as $post) : ?>
+        foreach ($posts as $post) : ?>
             <div class="post">
                 <br>
-                <form action="../Controller/PostController.php" method="post">
+                <!--<form action="./Controller/PostController.php" method="post">-->
+                <form action="./Controller/PostController.php?id=<?php echo $post["id"] ?>" method="post">
                     <input type="hidden" name="user_id" value="<?php echo $post["id"] ?>" />
                     <button><?php echo $post["id"]; ?></button>
-                </form>
-               
+                </form>               
                 <div class="post__name"><?php echo $post["name"]; ?></div>
                 <div class="post__text"><?php echo $post["text"]; ?></div>
                 <div class="post__signature"><?php echo $post["signature"]; ?></div>

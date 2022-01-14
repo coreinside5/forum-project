@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-require_once('Database.php');
+require_once 'Database.php';
 
 class PostManager extends Database
 {
@@ -28,10 +28,9 @@ class PostManager extends Database
     {
 
         $db = $this->connect();
-        $req = $db->prepare("SELECT name, text, signature FROM forumtest 
-            WHERE id =" . $postId);
-        //$req->bindParam(1, $this->postId, PDO::PARAM_STR);
-        $req->execute();
+        $req = $db->prepare('SELECT name, text, signature FROM forumtest 
+            WHERE id = ?');
+        $req->execute(array($postId));
         $post = $req->fetch();
         return $post;
     }
