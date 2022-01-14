@@ -8,7 +8,7 @@ $blue_1: rgb(77, 71, 104);
 .header {
   height: 375px;
   border-radius: 20px;
-  background-image: url("../images/autumn-mountains-sky-nature-landscape-website-header.jpg");
+  background-image: url("../images/colorful-spring-flowers-sunset-nature-landscape-web-header.jpg");
   background-size: cover;
   text-transform: uppercase;
   font-size: 35px;
@@ -50,3 +50,19 @@ a {
   text-decoration: none;
   color: $blue_1;
 }
+body{
+  //position: relative;
+}
+.mainbody{
+  border-radius: 20px;
+  background-color: gray;
+  max-width: 1230px;
+  margin: 0 auto;
+  //z-index: 10;
+  //position: absolute;
+}
+h1{
+  color: white;
+  text-shadow: -1px -1px 5px rgb(0, 230, 0), 1px -1px 5px rgb(0, 230, 0), -1px 1px 5px rgb(0, 230, 0), 1px 1px 5px rgb(0, 230, 0);
+}
+

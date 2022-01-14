@@ -1,7 +1,7 @@
 .header {
   height: 375px;
   border-radius: 20px;
-  background-image: url("../images/autumn-mountains-sky-nature-landscape-website-header.jpg");
+  background-image: url("../images/colorful-spring-flowers-sunset-nature-landscape-web-header.jpg");
   background-size: cover;
   text-transform: uppercase;
   font-size: 35px;
@@ -51,5 +51,17 @@ section {
 a {
   text-decoration: none;
   color: #4d4768;
+}
+
+.mainbody {
+  border-radius: 20px;
+  background-color: gray;
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: white;
+  text-shadow: -1px -1px 5px #00e600, 1px -1px 5px #00e600, -1px 1px 5px #00e600, 1px 1px 5px #00e600;
 }
 /*# sourceMappingURL=style.css.map */
