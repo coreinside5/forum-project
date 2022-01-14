@@ -8,7 +8,7 @@
     <p><?php echo $post['text'] ?></p>
     <p><?php echo $post['signature'] ?></p>
 
-    <p><a href="../">Back to homepage</a></p>
+    <p><a href="index.php?action=posts">Back to homepage</a></p>
 
     <p>Lorem ipsum dolor sit amet.</p>
 

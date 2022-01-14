@@ -12,7 +12,7 @@ Anything complex should be calculated in the model -->
             <div class="post">
                 <br>
                 <!--<form action="./Controller/PostController.php" method="post">-->
-                <form action="./Controller/PostController.php?id=<?php echo $post["id"] ?>" method="post">
+                <form action="./index.php?action=post&id=<?php echo $post["id"] ?>" method="post">
                     <input type="hidden" name="user_id" value="<?php echo $post["id"] ?>" />
                     <button><?php echo $post["id"]; ?></button>
                 </form>               
