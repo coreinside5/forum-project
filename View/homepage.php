@@ -1,29 +1,20 @@
 <?php require 'includes/header.php' ?>
-<!-- this is the view, try to put only simple if's and loops here.
-Anything complex should be calculated in the model -->
+
 <section>
+    <h1>Forum</h1>
+    <?php
+    foreach ($posts as $post) : ?>
+        <article class="posts">
+            <!--<form action="./index.php?action=post&id=<?php echo $post["id"] ?>" method="post">
+                <input type="hidden" name="user_id" value="<?php echo $post["id"] ?>" />
+                <button><?php echo $post["id"]; ?></button>
+            </form>-->    
 
-    <h1>Forum - test</h1>
-    <ol>
-
-        <?php
-        //var_dump($posts->getPosts());
-        foreach ($posts as $post) : ?>
-            <div class="post">
-                <br>
-                <!--<form action="./Controller/PostController.php" method="post">-->
-                <form action="./index.php?action=post&id=<?php echo $post["id"] ?>" method="post">
-                    <input type="hidden" name="user_id" value="<?php echo $post["id"] ?>" />
-                    <button><?php echo $post["id"]; ?></button>
-                </form>               
-                <div class="post__name"><?php echo $post["name"]; ?></div>
-                <div class="post__text"><?php echo $post["text"]; ?></div>
-                <div class="post__signature"><?php echo $post["signature"]; ?></div>
-                <br>
-            </div>
-
-        <?php endforeach; ?>
-    </ol>
-
+            <div class="post__name"><a class="postitem" href="./index.php?action=post&id=<?php echo $post["id"] ?>"><?php echo $post["name"]; ?></a></div>
+            <div class="post__text"><?php echo $post["text"]; ?></div>
+            <div class="post__signature"><?php echo $post["signature"]; ?></div>
+        </article>
+    <?php endforeach; ?>
 </section>
+
 <?php require 'includes/footer.php' ?>

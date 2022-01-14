@@ -31,4 +31,25 @@ html {
   font-size: 18px;
   background-image: url("../images/beige-paper.png");
 }
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.posts {
+  background-color: #d6d4d4;
+  border-color: gray;
+  border-style: double;
+}
+
+a {
+  text-decoration: none;
+  color: #4d4768;
+}
 /*# sourceMappingURL=style.css.map */

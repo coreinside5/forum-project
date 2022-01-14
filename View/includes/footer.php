@@ -8,10 +8,10 @@
   <div id="footer_3">
   </div>
   <?= date("F j, Y, g:i a") . "\n" ?>
-  <?= getcwd() . "\n" ?>  
+  <?= getcwd() . "\n" ?>
 </footer>
-        
-   
-    </body>
 
-    </html>
+
+</body>
+
+</html>

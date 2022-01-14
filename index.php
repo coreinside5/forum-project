@@ -27,5 +27,6 @@ try {
         $controller->render($_GET, $_POST);
     }
 } catch (Exception $e) {
+    echo 'ErrMSG';
     echo 'Erreur : ' . $e->getMessage();
 }

@@ -1,11 +1,14 @@
+//@import '_reset.scss';
+
 $white_1: white;
 $purple_1: rgb(212, 97, 212);
-
+$gray_1: rgb(214, 212, 212);
+$blue_1: rgb(77, 71, 104);
 
 .header {
   height: 375px;
   border-radius: 20px;
-  background-image: url("../src/images/autumn-mountains-sky-nature-landscape-website-header.jpg");
+  background-image: url("../images/autumn-mountains-sky-nature-landscape-website-header.jpg");
   background-size: cover;
   text-transform: uppercase;
   font-size: 35px;
@@ -29,5 +32,21 @@ $purple_1: rgb(212, 97, 212);
 }
 html {
   font-size: 18px;
-  background-image: url("../images/beige-paper.png");
+  background-image: url("../images/beige-paper.png");  
+}
+section {
+  display: flex;
+  flex-direction: column;
+}
+.posts{
+  background-color: $gray_1;
+  border-color: gray;
+  border-style: double;
+}
+.postitem{
+  
+}
+a {
+  text-decoration: none;
+  color: $blue_1;
 }
