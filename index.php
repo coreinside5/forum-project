@@ -32,23 +32,31 @@ try {
     }*/
 
 
-
-    switch ($_GET['action']) {
-        case 'posts':
-            $controller = new PostsController();
-            $controller->render($_GET, $_POST);
-            break;
-        case 'post':
-            $controller = new PostController();
-            $controller->render($_GET, $_POST);
-            break;
-        case 'topic':
-            $controller = new TopicController();
-            $controller->render($_GET, $_POST);
-            break;
-        default:
-            $controller = new TopicsController();
-            $controller->render($_GET, $_POST);
+    if (isset($_GET['action'])) {
+        switch ($_GET['action']) {
+            case 'posts':
+                $controller = new PostsController();
+                $controller->render($_GET, $_POST);
+                break;
+            case 'post':
+                $controller = new PostController();
+                $controller->render($_GET, $_POST);
+                break;
+            case 'topic':
+                $controller = new TopicController();
+                $controller->render($_GET, $_POST);
+                break;
+            case 'login':
+                $controller = new LoginController();
+                $controller = render($_GET, $_POST);
+            default:
+                $controller = new TopicsController();
+                $controller->render($_GET, $_POST);
+        }
+    } else {
+        $_GET['action'] = 'topic';
+        $controller = new TopicsController();
+        $controller->render($_GET, $_POST);
     }
 } catch (Exception $e) {
     echo 'ErrMSG';

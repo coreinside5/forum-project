@@ -9,6 +9,10 @@
   </div>
   <?= date("F j, Y, g:i a") . "\n" ?>
   <?= getcwd() . "\n" ?>
+  Get value is =>
+  <?= $_GET['action'] ?>
+  server document rood value is =>
+  <?= $_SERVER['DOCUMENT_ROOT'] ?>
 </footer>
 
 

@@ -1,4 +1,5 @@
-<?php require 'includes/header.php' ?>
+<?php //require $_SERVER['DOCUMENT_ROOT'] . "/forum-project/includes/header.php" ?> 
+<?php require "includes/header.php" ?>
 <div class="mainbody">
     <section>
         <h1>Homepage</h1>
@@ -8,7 +9,7 @@
                 <!--<form action="./index.php?action=post&id=<?php echo $post["id"] ?>" method="post">
                 <input type="hidden" name="user_id" value="<?php echo $post["id"] ?>" />
                 <button><?php echo $post["id"]; ?></button>
-            </form>-->
+                </form>-->
 
                 <div class="post__name"><a class="postitem" href="./index.php?action=post&id=<?php echo $post["id"] ?>"><?php echo $post["name"]; ?></a></div>
                 <div class="post__text"><?php echo $post["text"]; ?></div>
