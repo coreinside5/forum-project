@@ -63,5 +63,5 @@ class dbexercice extends Database
 }
 $exercice = new dbexercice;
 //$exercice->getForumPosts();
-print_r($exercice->getRealIP());
+//print_r($exercice->getRealIP());
 
