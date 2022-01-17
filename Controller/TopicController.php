@@ -12,7 +12,9 @@ class TopicController
     public function render(array $GET, array $POST)
     {
         $topicManager = new TopicsManager();
+        print_r($_GET['pagename']);
         $topic = $topicManager->getTopic((string)$_GET['pagename']);
+        //echo 'pass1';
         require './View/topic.php';
     }
 }

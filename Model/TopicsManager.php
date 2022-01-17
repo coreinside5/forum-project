@@ -18,8 +18,9 @@ class TopicsManager extends Database
     public function getTopic(string $pageName)
     {
         $db = $this->connect();
-        $req = $db->prepare('SELECT * FROM ?');
-        $req->execute(array($pageName));
+        $req = $db->prepare("SELECT * FROM $pageName");
+        //$req->bindParam(1, $pageName, PDO::PARAM_STR);
+        $req->execute();
         return $req->fetchAll(PDO::FETCH_ASSOC);
     }
 }

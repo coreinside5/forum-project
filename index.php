@@ -46,6 +46,10 @@ try {
                 $controller = new TopicController();
                 $controller->render($_GET, $_POST);
                 break;
+            case 'topics':
+                $controller = new TopicsController();
+                $controller->render($_GET, $_POST);
+                break;
             case 'login':
                 $controller = new LoginController();
                 $controller = render($_GET, $_POST);
@@ -54,7 +58,7 @@ try {
                 $controller->render($_GET, $_POST);
         }
     } else {
-        $_GET['action'] = 'topic';
+        $_GET['action'] = 'topics';
         $controller = new TopicsController();
         $controller->render($_GET, $_POST);
     }
