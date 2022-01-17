@@ -2,7 +2,7 @@
 class Database
 {
     public static $host = "mysql";
-    public static $dbName = "forum";
+    public static $dbName = "teaforum";
     public static $port = "3306";
     public static $username = "root";
     public static $password = "root";

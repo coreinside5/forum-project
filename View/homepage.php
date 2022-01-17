@@ -1,7 +1,7 @@
 <?php require 'includes/header.php' ?>
 <div class="mainbody">
     <section>
-        <h1>Forum</h1>
+        <h1>Homepage</h1>
         <?php
         foreach ($posts as $post) : ?>
             <article class="posts">

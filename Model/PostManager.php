@@ -19,7 +19,7 @@ class PostManager extends Database
 
         $db = $this->connect();
 
-        $req = $db->query('SELECT * FROM forumtest');
+        $req = $db->query('SELECT * FROM teatypes');
 
         return $req->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -28,10 +28,11 @@ class PostManager extends Database
     {
 
         $db = $this->connect();
-        $req = $db->prepare('SELECT name, text, signature FROM forumtest 
+        $req = $db->prepare('SELECT name, text, signature FROM teatypes 
             WHERE id = ?');
         $req->execute(array($postId));
         $post = $req->fetch();
         return $post;
     }
 }
+
