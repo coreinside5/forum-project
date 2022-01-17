@@ -1,6 +1,6 @@
 <?php 
 
-public function getRealIP()
+function getRealIP()
     {
         if (isset($_SERVER["HTTP_CLIENT_IP"])) {
             $ip = $_SERVER["HTTP_CLIENT_IP"];
