@@ -3,9 +3,9 @@
 declare(strict_types=1);
 //include all your controllers here
 require './Controller/HomepageController.php';
-require './Controller/PostController.php';
-require './Controller/TopicsController.php';
-require './Controller/TopicController.php';
+require './Controller/LoginController.php';
+require './Controller/AboutController.php';
+require './Controller/PostsController.php';
 //Your index is your Router. You could write a simple IF here based on some $_GET or $_POST vars, to choose your controller
 
 /*if(isset($_GET['post']) && $_GET['post'] === 'post') {
@@ -36,30 +36,20 @@ try {
         switch ($_GET['action']) {
             case 'posts':
                 $controller = new PostsController();
-                $controller->render($_GET, $_POST);
-                break;
-            case 'post':
-                $controller = new PostController();
-                $controller->render($_GET, $_POST);
-                break;
-            case 'topic':
-                $controller = new TopicController();
-                $controller->render($_GET, $_POST);
-                break;
-            case 'topics':
-                $controller = new TopicsController();
-                $controller->render($_GET, $_POST);
-                break;
+                $controller-> render($_GET, $_POST);            
             case 'login':
                 $controller = new LoginController();
-                $controller = render($_GET, $_POST);
+                $controller->render($_GET, $_POST);
+            case 'about':
+                $controller = new AboutController();
+                $controller->render($_GET, $_POST);
             default:
-                $controller = new TopicsController();
+                $controller = new MasterController();
                 $controller->render($_GET, $_POST);
         }
     } else {
-        $_GET['action'] = 'topics';
-        $controller = new TopicsController();
+        $_GET['action'] = 'main';
+        $controller = new MasterController();
         $controller->render($_GET, $_POST);
     }
 } catch (Exception $e) {

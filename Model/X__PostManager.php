@@ -7,13 +7,6 @@ require_once 'Database.php';
 class PostManager extends Database
 {
 
-    private $name;
-
-    public function __construct(string $name = null)
-    {
-        $this->name = $name;
-    }
-
     public function getPosts()
     {
 

@@ -1,0 +1,136 @@
+@font-face {
+  font-family: 'Gideon Roman';
+  font-style: normal;
+  font-weight: 100;
+  src: url("../fonts/GideonRoman-Regular.ttf");
+}
+
+* {
+  font-family: "Gideon Roman", normal !important;
+}
+
+html {
+  font-size: 18px;
+  background-image: url("../images/beige-paper.png");
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: #4d4768;
+}
+
+h1 {
+  color: white;
+  text-shadow: -1px -1px 5px #00e600, 1px -1px 5px #00e600, -1px 1px 5px #00e600, 1px 1px 5px #00e600;
+}
+
+header {
+  height: 250px;
+  border-radius: 5px;
+  background-image: url("../images/colorful-spring-flowers-sunset-nature-landscape-web-header.jpg");
+  background-size: cover;
+  text-transform: uppercase;
+  font-size: 28px;
+  text-align: center;
+  color: white;
+}
+
+header a {
+  color: white;
+  text-shadow: -1px -1px 5px #00e600, 1px -1px 5px #00e600, -1px 1px 5px #00e600, 1px 1px 5px #00e600;
+  font-size: 20px;
+  text-transform: none;
+}
+
+header h1 a {
+  color: white;
+  text-shadow: -1px -1px 5px #00e600, 1px -1px 5px #00e600, -1px 1px 5px #00e600, 1px 1px 5px #00e600;
+  text-transform: none;
+  font-size: 60px;
+}
+
+.footer {
+  height: 150px;
+  border-radius: 5px;
+  background-color: #d461d4;
+  /* For browsers that do not support gradients */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d461d4), to(#292828));
+  background-image: linear-gradient(180deg, #d461d4, #292828);
+}
+
+.mainsection {
+  border-radius: 5px;
+  position: relative;
+  top: -60px;
+  background-color: white;
+  padding: 30px;
+  margin: 30px;
+}
+
+.posts {
+  background-color: #d6d4d4;
+  border-color: gray;
+  border-style: double;
+}
+
+.mainbody {
+  border-radius: 5px;
+  background-color: gray;
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+.navlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navlist li {
+  margin: auto 10px;
+}
+
+.login {
+  border: 1px;
+  border-style: dotted;
+  border-color: black;
+  text-align: center;
+}
+
+.categories_name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-style: double;
+  border-color: darkgray;
+}
+
+.subcat__item {
+  font-size: 15px;
+  color: black;
+  font-style: bold;
+}
+
+.post__item {
+  font-size: 25px;
+  color: black;
+  font-style: bold;
+}
+/*# sourceMappingURL=main.css.map */

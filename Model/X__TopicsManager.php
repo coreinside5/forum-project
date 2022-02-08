@@ -7,10 +7,10 @@ require_once 'Database.php';
 class TopicsManager extends Database
 {
     //retrieves all topics (table names) from database
-    public function getTopics()
+    public function getCategories()
     {
         $db = $this->connect();
-        $req = $db->prepare('SHOW tables FROM teaforum');
+        $req = $db->prepare("SELECT title FROM forumCategories");
         $req->execute();
         return $req;    
     }
