@@ -24,11 +24,23 @@ class MasterManager extends Database
         $result = $req->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
-    public function getPosts(int $subcategoryId){
+    public function getPosts(int $subcategoryId)
+    {
         $db = $this->connect();
-        $req = $db->prepare("SELECT forumPosts.title, forumPosts.date, users.nick FROM forumPosts inner join users on forumPosts.idUser = users.id where forumPosts.idSubcategory = $subcategoryId and forumPosts.parentPost = 0");
+        $req = $db->prepare("SELECT forumPosts.id, forumPosts.title, forumPosts.date, users.nick FROM forumPosts inner join users on forumPosts.idUser = users.id where forumPosts.idSubcategory = $subcategoryId and forumPosts.parentPost = 0");
         $req->execute();
         $result = $req->fetchAll(PDO::FETCH_ASSOC);
         return $result;
+    }
+    public function getThreads(int $topicId, int $parentPost = 0)
+    {
+        $db = $this->connect();
+        $req = $db->prepare("SELECT forumPosts.id, forumPosts.title, forumPosts.date, users.nick FROM forumPosts inner join users on forumPosts.idUser = users.id where forumPosts.id = $topicId and forumPosts.parentPost = $parentPost");
+        $req->execute();
+        $result = $req->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+    public function getTopicThreads(){
+        
     }
 }

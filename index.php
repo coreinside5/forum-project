@@ -6,6 +6,7 @@ require './Controller/HomepageController.php';
 require './Controller/LoginController.php';
 require './Controller/AboutController.php';
 require './Controller/PostsController.php';
+require './Controller/ThreadController.php';
 //Your index is your Router. You could write a simple IF here based on some $_GET or $_POST vars, to choose your controller
 
 /*if(isset($_GET['post']) && $_GET['post'] === 'post') {
@@ -36,16 +37,28 @@ try {
         switch ($_GET['action']) {
             case 'posts':
                 $controller = new PostsController();
-                $controller-> render($_GET, $_POST);            
+                $controller->render($_GET, $_POST);
+                break;
             case 'login':
                 $controller = new LoginController();
                 $controller->render($_GET, $_POST);
+                break;
             case 'about':
                 $controller = new AboutController();
                 $controller->render($_GET, $_POST);
+                break;
+            case 'main':
+                $controller = new MasterController();
+                $controller->render($_GET, $_POST);
+                break;
+            case 'threads':
+                $controller = new ThreadController();
+                $controller->render($_GET, $_POST);
+                break;
             default:
                 $controller = new MasterController();
                 $controller->render($_GET, $_POST);
+                break;
         }
     } else {
         $_GET['action'] = 'main';
